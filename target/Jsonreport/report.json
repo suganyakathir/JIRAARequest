@@ -1,0 +1,402 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2024-01-29T17:35:32.015Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4154514600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksClass.beforeScanario1()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "To validate the create api issue with post call",
+        "description": "",
+        "id": "to-validate-the-jira-api-s;to-validate-the-create-api-issue-with-post-call;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 24683300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "To Add the Baseuri",
+            "match": {
+              "location": "JIRASteps.to_add_the_Baseuri()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1513118500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "To add the payload for create api \"Login not working\" and \"Otp cant received\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Login not working\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"Otp cant received\"",
+                  "offset": 58
+                }
+              ],
+              "location": "JIRASteps.to_add_the_payload_for_create_api_and(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.IllegalArgumentException: No enum constant org.stepdefinition.ApiResources.create issue\r\n\tat java.lang.Enum.valueOf(Enum.java:238)\r\n\tat org.stepdefinition.ApiResources.valueOf(ApiResources.java:1)\r\n\tat org.stepdefinition.JIRASteps.to_call_the_create_issue_api_with_request(JIRASteps.java:35)\r\n\tat ✽.To call the \"create issue\" api with \"POST\" request(file:src/test/resources/features/JIRAApi.feature:7)\r\n",
+              "duration": 6478100,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "To call the \"create issue\" api with \"POST\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"create issue\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 36
+                }
+              ],
+              "location": "JIRASteps.to_call_the_create_issue_api_with_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2198700,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "The response code should be 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 28
+                }
+              ],
+              "location": "JIRASteps.the_response_code_should_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1992300,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "The self should contain the \"suganyakathir\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"suganyakathir\"",
+                  "offset": 28
+                }
+              ],
+              "location": "JIRASteps.the_self_should_contain_the(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@createissue"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-01-29T17:35:38.024Z",
+        "before": [
+          {
+            "result": {
+              "duration": 37992000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksClass.beforeScanario1()"
+            }
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat org.stepdefinition.JIRASteps.to_add_the_payload_for_create_api_and(JIRASteps.java:30)\r\n\tat org.stepdefinition.HooksClass.beforeScanario2(HooksClass.java:19)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:65)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:42)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:50)\r\n\tat io.cucumber.junit.PickleRunners$WithStepDescriptions.run(PickleRunners.java:97)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:144)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:65)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:174)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)\r\n",
+              "duration": 4439800,
+              "status": "failed"
+            },
+            "match": {
+              "location": "HooksClass.beforeScanario2()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "To validate the update api issue with put call",
+        "description": "",
+        "id": "to-validate-the-jira-api-s;to-validate-the-update-api-issue-with-put-call",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2797300,
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "To Add the Baseuri",
+            "match": {
+              "location": "JIRASteps.to_add_the_Baseuri()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3100800,
+              "status": "skipped"
+            },
+            "line": 17,
+            "name": "To add payload for update issue api",
+            "match": {
+              "location": "JIRASteps.to_add_payload_for_update_issue_api()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7745800,
+              "status": "skipped"
+            },
+            "line": 18,
+            "name": "To call the \"updateissue\" api with \"PUT\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"updateissue\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"PUT\"",
+                  "offset": 35
+                }
+              ],
+              "location": "JIRASteps.to_call_the_create_issue_api_with_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 15580000,
+              "status": "skipped"
+            },
+            "line": 19,
+            "name": "The response code should be 204",
+            "match": {
+              "arguments": [
+                {
+                  "val": "204",
+                  "offset": 28
+                }
+              ],
+              "location": "JIRASteps.the_response_code_should_be(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@updateissue"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-01-29T17:35:38.196Z",
+        "before": [
+          {
+            "result": {
+              "duration": 35059800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksClass.beforeScanario1()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "To validate the get api issue with get call",
+        "description": "",
+        "id": "to-validate-the-jira-api-s;to-validate-the-get-api-issue-with-get-call",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 492825200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "To Add the Baseuri",
+            "match": {
+              "location": "JIRASteps.to_add_the_Baseuri()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8158065500,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "To call the \"getissue\" api with \"GET\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"getissue\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 32
+                }
+              ],
+              "location": "JIRASteps.to_call_the_create_issue_api_with_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 631241000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The reponse code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "JIRASteps.the_reponse_code_should_be(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@getissue"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-01-29T17:35:47.530Z",
+        "before": [
+          {
+            "result": {
+              "duration": 10969700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksClass.beforeScanario1()"
+            }
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat org.stepdefinition.JIRASteps.to_add_the_payload_for_create_api_and(JIRASteps.java:30)\r\n\tat org.stepdefinition.HooksClass.beforeScanario2(HooksClass.java:19)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:65)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:42)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:50)\r\n\tat io.cucumber.junit.PickleRunners$WithStepDescriptions.run(PickleRunners.java:97)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:144)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:65)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:174)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)\r\n",
+              "duration": 390100,
+              "status": "failed"
+            },
+            "match": {
+              "location": "HooksClass.beforeScanario2()"
+            }
+          }
+        ],
+        "line": 28,
+        "name": "To validate the create api issue with delete call",
+        "description": "",
+        "id": "to-validate-the-jira-api-s;to-validate-the-create-api-issue-with-delete-call",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5316900,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "To Add the Baseuri",
+            "match": {
+              "location": "JIRASteps.to_add_the_Baseuri()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4137500,
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "To call the \"deleteissue\" api with \"DELETE\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"deleteissue\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"DELETE\"",
+                  "offset": 35
+                }
+              ],
+              "location": "JIRASteps.to_call_the_create_issue_api_with_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2038400,
+              "status": "skipped"
+            },
+            "line": 31,
+            "name": "The response code should be 204",
+            "match": {
+              "arguments": [
+                {
+                  "val": "204",
+                  "offset": 28
+                }
+              ],
+              "location": "JIRASteps.the_response_code_should_be(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@deleteissue"
+          }
+        ]
+      }
+    ],
+    "name": "To validate the jira api\u0027s",
+    "description": "",
+    "id": "to-validate-the-jira-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/JIRAApi.feature",
+    "tags": []
+  }
+]
